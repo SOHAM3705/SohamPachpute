@@ -14,7 +14,7 @@ import {
 } from "@/components/ui/form";
 import { Textarea } from "@/components/ui/textarea";
 import { Input } from "@/components/ui/input";
-import { sendEmail } from "@/actions/sendEmail";
+
 import { Header } from "@/components/header";
 import { HeaderNavigation } from "@/components/headerNavigation";
 import { Bulge } from "@/components/bulge";
@@ -42,17 +42,7 @@ export default function ContactPage() {
     }
   });
 
-  const onSubmit = async (data:any)=>{
-    setStatus("Loading");
-    const success = await sendEmail(data);
 
-    if(success){
-      form.reset();
-      setStatus("Success");
-    } else {
-      setStatus("Error");
-    }
-  };
 
   const contactMethods = [
     {
@@ -134,7 +124,7 @@ export default function ContactPage() {
 
               <Form {...form}>
                 <form
-                  onSubmit={form.handleSubmit(onSubmit)}
+                
                   className="space-y-6"
                 >
 
