@@ -2,11 +2,11 @@ import { links } from "@/data/data";
 import React from "react";
 
 const projects = [
-  { name: "PIC",   image: "/projects/1.png", href: "https://picpccoer.in" },
-  { name: "School Website",   image: "/projects/2.png", href: "https://modelschooldhanorepune.com" },
-  { name: "Invennzy", image: "/projects/3.png", href: "https://invennzy.com" },
-  { name: "Gradyze",  image: "/projects/4.png", href: "https://gradyze.com" },
-  { name: "Pixel Craft",  image: "/projects/5.png", href: "https://pixelcraftpccoer.in" },
+  { name: "PIC",   image: "/img/projects/1.png", href: "https://picpccoer.in" },
+  { name: "School Website",   image: "/img/projects/2.png", href: "https://modelschooldhanorepune.com" },
+  { name: "Invennzy", image: "/img/projects/3.png", href: "https://invennzy.com" },
+  { name: "Gradyze",  image: "/img/projects/4.png", href: "https://gradyze.com" },
+  { name: "Pixel Craft",  image: "/img/projects/5.png", href: "https://pixelcraftpccoer.in" },
 ];
 
 const allProjects = [...projects, ...projects];

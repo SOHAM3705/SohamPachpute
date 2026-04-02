@@ -101,7 +101,6 @@ export function HeaderNavigation() {
     },
   ];
 
-
   return (
     <div
       id="headerNavigation"
@@ -115,41 +114,38 @@ export function HeaderNavigation() {
       {/* 2×2 Grid for Desktop, 1×4 Grid for Mobile */}
       <nav className="flex-1 grid grid-cols-1 md:grid-cols-2 grid-rows-4 md:grid-rows-2">
         {headerData.map((data, i) => (
-         <div
-  key={data.name}
-  onClick={handleNavClick}
-  className={`
-    headerAnimate group relative flex items-end p-6 md:p-10 overflow-hidden
-    cursor-pointer
-    ${isNavDark ? "border-white/15" : "border-black/15"}
-    border-b border-solid
-    ${i === headerData.length - 1 ? "border-b-0" : ""}
-    ${i % 2 === 0 ? `md:border-r` : ""}
-    ${i >= 2 ? "md:border-b-0" : ""}
-  `}
->
-  {/* Hover sweep */}
-  <div className={`absolute inset-0 scale-y-0 origin-bottom ${hoverFill} transition-transform duration-500 ease-out group-hover:scale-y-100`} />
+          <div
+            key={data.name}
+            className={`
+              headerAnimate group relative flex items-end p-6 md:p-10 overflow-hidden
+              border-b ${borderClass}
+              ${i % 2 === 0 ? `border-r ${borderClass}` : ""}
+              ${i >= 2 ? "border-b-0 md:border-b" : ""}
+              md:col-span-1 col-span-1
+            `}
+          >
+            {/* Hover sweep */}
+            <div className={`absolute inset-0 scale-y-0 origin-bottom ${hoverFill} transition-transform duration-500 ease-out group-hover:scale-y-100`} />
 
-  {/* ✅ Inner wrapper kept as requested */}
-  <div onClick={handleNavClick}>
-    <Magentic
-      href={data.href}
-      className={`relative z-10 font-bold leading-none ${textClass}`}
-      style={{ fontSize: "clamp(24px, 5vw, 80px)" }}
-      scrambleParams={{ text: data.name, chars: "-xx" }}
-    >
-      <span className="scrambleText block transition-transform duration-300 group-hover:translate-x-3">
-        {data.name}
-      </span>
-    </Magentic>
-  </div>
+            {/* Wrap Magentic in a div with onClick */}
+            <div onClick={handleNavClick}>
+              <Magentic
+                href={data.href}
+                className={`relative z-10 font-bold leading-none ${textClass}`}
+                style={{ fontSize: "clamp(24px, 5vw, 80px)" }}
+                scrambleParams={{ text: data.name, chars: "-xx" }}
+              >
+                <span className="scrambleText block transition-transform duration-300 group-hover:translate-x-3">
+                  {data.name}
+                </span>
+              </Magentic>
+            </div>
 
-  {/* Index number */}
-  <span className={`absolute top-4 right-6 md:top-8 md:right-10 text-sm font-mono ${indexOpacity}`}>
-    0{i + 1}
-  </span>
-</div>
+            {/* Index number */}
+            <span className={`absolute top-4 right-6 md:top-8 md:right-10 text-sm font-mono ${indexOpacity}`}>
+              0{i + 1}
+            </span>
+          </div>
         ))}
       </nav>
 
