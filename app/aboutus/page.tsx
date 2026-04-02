@@ -78,7 +78,7 @@ const education = [
 
 export default function About() {
   return (
-    <section className="section section__2 darkGradient relative text-colorLight">
+    <section className="darkGradient relative text-colorLight">
       <Cursor />
       <Header color="Light"/>
        <HeaderNavigation/>
