@@ -28,45 +28,45 @@ const education = [
 
 export function AboutEducationWrapper() {
   return (
-    <main className="relative w-full min-h-screen mx-auto overflow-hidden flex flex-col justify-center px-paddingX max-w-maxWidth">
-      <p className="text-white/30 text-xs uppercase tracking-[0.3em] font-mono mb-3 relative z-10">
+    <main className="relative w-full min-h-screen mx-auto overflow-hidden flex flex-col justify-center px-paddingX max-w-maxWidth bg-white text-gray-900">
+      <p className="text-gray-400 text-xs uppercase tracking-[0.3em] font-mono mb-3 relative z-10">
         Education
       </p>
       <h2
-        className="font-black text-white leading-none tracking-tighter mb-16 relative z-10"
+        className="font-black leading-none tracking-tighter mb-16 relative z-10 text-gray-900"
         style={{ fontSize: "clamp(36px, 5vw, 72px)" }}
       >
         ACADEMIC
         <br />
-        <span className="yellow__it">JOURNEY</span>
+        <span className="text-yellow-500">JOURNEY</span>
       </h2>
 
       <div className="flex flex-col relative z-10">
         {education.map((e, i) => (
           <div
             key={i}
-            className="group grid grid-cols-[1fr_auto] gap-6 items-start py-8 border-b border-white/10 last:border-0 hover:bg-white/[0.02] -mx-4 px-4 rounded-xl transition-all duration-300"
+            className="group grid grid-cols-[1fr_auto] gap-6 items-start py-8 border-b border-gray-200 last:border-0 hover:bg-gray-50 -mx-4 px-4 rounded-xl transition-all duration-300"
           >
             <div className="flex flex-col md:flex-row md:items-center gap-4">
-              <span className="text-white/15 font-mono text-xs flex-shrink-0 w-6">
+              <span className="text-gray-200 font-mono text-xs flex-shrink-0 w-6">
                 {String(i + 1).padStart(2, "0")}
               </span>
               <div>
                 <div className="flex items-center gap-3 mb-1">
-                  <h3 className="text-white font-bold text-lg">{e.degree}</h3>
+                  <h3 className="text-gray-900 font-bold text-lg">{e.degree}</h3>
                   {e.current && (
-                    <span className="px-2 py-0.5 rounded-full text-[10px] font-mono bg-yellow-400/10 text-yellow-400 border border-yellow-400/20">
+                    <span className="px-2 py-0.5 rounded-full text-[10px] font-mono bg-yellow-100 text-yellow-600 border border-yellow-200">
                       CURRENT
                     </span>
                   )}
                 </div>
-                <p className="text-white/40 text-sm">{e.school}</p>
+                <p className="text-gray-500 text-sm">{e.school}</p>
               </div>
             </div>
 
             <div className="flex flex-col items-end gap-1 pt-0.5">
-              <span className="text-white/50 text-sm font-bold font-mono">{e.score}</span>
-              <span className="text-white/20 text-xs font-mono">{e.year}</span>
+              <span className="text-gray-600 text-sm font-bold font-mono">{e.score}</span>
+              <span className="text-gray-400 text-xs font-mono">{e.year}</span>
             </div>
           </div>
         ))}
@@ -74,7 +74,7 @@ export function AboutEducationWrapper() {
 
       {/* Ghost watermark */}
       <div
-        className="absolute right-0 bottom-8 text-white/[0.025] font-black pointer-events-none select-none leading-none"
+        className="absolute right-0 bottom-8 text-gray-100/20 font-black pointer-events-none select-none leading-none"
         style={{ fontSize: "clamp(80px, 14vw, 200px)" }}
       >
         EDU

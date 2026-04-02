@@ -10,7 +10,7 @@ export function AboutSkillsSection() {
   return (
     <section
       ref={sectionRef}
-      className="section lightGradient relative text-colorLight min-h-screen"
+      className="section section__2 second lightGradient relative text-colorLight min-h-screen"
     >
       <Bulge type="Dark" />
       <AboutSkillsWrapper />

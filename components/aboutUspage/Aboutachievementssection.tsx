@@ -10,7 +10,7 @@ export function AboutAchievementsSection() {
   return (
     <section
       ref={sectionRef}
-      className="section section__1 darkGradient relative text-colorLight min-h-screen"
+      className="section section__3 third darkGradient relative text-colorLight min-h-screen"
     >
       <Bulge type="Light" />
       <AboutAchievementsWrapper />

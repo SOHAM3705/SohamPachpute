@@ -10,11 +10,11 @@ export function AboutEducationSection() {
   return (
     <section
       ref={sectionRef}
-      className="section darkGradient relative text-colorLight min-h-screen"
+      className="section section__4 fourth lightGradient relative text-colorLight min-h-screen"
     >
-      <Bulge type="Light" />
+      <Bulge type="Dark" />
       <AboutEducationWrapper />
     </section>
-  );
+  ); 
 }
  
