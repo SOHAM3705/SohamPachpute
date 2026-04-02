@@ -20,7 +20,7 @@ const education = [
   {
     degree: "SSC — Maharashtra State Board",
     school: "S.N.B.P School, Morwadi, Pune",
-    year: "2011 – 2021",
+    year: "2020 – 2021",
     score: "92%",
     current: false,
   },
