@@ -107,7 +107,7 @@ export function HeaderNavigation() {
       className={`fixed left-0 top-0 z-[6000] hidden h-full w-full -translate-y-full flex-col ${bgClass}`}
     >
       {/* Top bar */}
-      <div className={`headerAnimate flex items-center justify-between px-8 py-6 border-b ${borderClass}`}>
+      <div className={`headerAnimate flex items-center justify-between px-12 py-10 border-b ${borderClass}`}>
         <Header mode="cross" className="" color={headerColor} />
       </div>
 

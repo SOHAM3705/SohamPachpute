@@ -14,14 +14,15 @@ import FullpageProvider from "@/components/fullpageProvider";
 export default function About() {
   return (
     <>
+     <Cursor />
     <FullpageProvider>
-      <Cursor />
-      <Header color="Light" />
+      
       <HeaderNavigation />
       <AboutHeroSection />
       <AboutSkillsSection />
       <AboutAchievementsSection />
       <AboutEducationSection />
+      
       </FullpageProvider>
     </>
   );

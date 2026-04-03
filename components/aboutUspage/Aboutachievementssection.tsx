@@ -3,6 +3,7 @@
 import React, { useRef } from "react";
 import { AboutAchievementsWrapper } from "./Aboutachievementswrapper";
 import { Bulge } from "@/components/bulge";
+import { Header } from "../header";
 
 export function AboutAchievementsSection() {
   const sectionRef = useRef(null);
@@ -13,6 +14,7 @@ export function AboutAchievementsSection() {
       className="section section__3 third darkGradient relative text-colorLight min-h-screen"
     >
       <Bulge type="Light" />
+      <Header color="Light" />
       <AboutAchievementsWrapper />
     </section>
   );
