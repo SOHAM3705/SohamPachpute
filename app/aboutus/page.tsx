@@ -15,14 +15,14 @@ export default function About() {
   return (
     <>
      <Cursor />
+   
+            <HeaderNavigation />
     <FullpageProvider>
-      
-      <HeaderNavigation />
+    
       <AboutHeroSection />
       <AboutSkillsSection />
       <AboutAchievementsSection />
       <AboutEducationSection />
-      
       </FullpageProvider>
     </>
   );
